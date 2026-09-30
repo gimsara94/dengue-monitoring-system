@@ -1,0 +1,47 @@
+### 1. Test Validation (Should Fail - Missing Password)
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin"
+}
+
+### 2. Valid Login (Assuming setup-admin was run previously)
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "securepassword123"
+}
+
+// Copy the "token" from the response above and use it below!
+
+### 3. Test Validation - Create Hospital (Should Fail - Missing Location)
+POST http://localhost:5000/api/admin/hospital
+Content-Type: application/json
+Authorization: Bearer <PASTE_TOKEN_HERE>
+
+{
+    "name": "General Hospital"
+}
+
+### 4. Create Staff - Doctor (Should Pass)
+POST http://localhost:5000/api/admin/doctors
+Content-Type: application/json
+Authorization: Bearer <PASTE_TOKEN_HERE>
+
+{
+    "name": "Dr. Smith",
+    "password": "password123"
+}
+
+### 5. Add Vitals (Should Fail - PCV is not for vitals schema, PR is out of bounds)
+POST http://localhost:5000/api/charts/staff/1/1/vitals/A12
+Content-Type: application/json
+Authorization: Bearer <PASTE_DOCTOR_TOKEN_HERE>
+
+{
+    "pr_min": 400,
+    "pcv_percentage": 50
+}

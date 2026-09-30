@@ -1,0 +1,198 @@
+.patient-profile-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.patient-profile-container.is-critical-tint {
+    background: linear-gradient(180deg, #fef2f2 0%, #fff 400px);
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2), 0 10px 25px -5px rgba(239, 68, 68, 0.1);
+}
+
+.critical-top-ribbon {
+    background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+    text-transform: uppercase;
+}
+
+.profile-header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+.btn-toggle-critical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    min-width: 160px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    color: #ef4444;
+    transition: all 0.2s;
+}
+
+.btn-toggle-critical:hover {
+    background-color: #fef2f2;
+    border-color: #fca5a5;
+}
+
+.btn-toggle-critical.active {
+    background-color: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.btn-toggle-critical.active:hover {
+    background-color: #059669;
+}
+
+.btn-toggle-critical:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.critical-badge-large {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ef4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.3);
+}
+
+.patient-header-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.avatar-icon {
+    color: #94a3b8;
+    background: #f1f5f9;
+    padding: 1rem;
+    border-radius: 9999px;
+    width: 80px;
+    height: 80px;
+}
+
+.title-area h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.title-area .subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+.demographics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.demo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.demo-item .label {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.demo-item .value {
+    font-size: 1.05rem;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.chart-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.chart-section-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+    text-align: center;
+}
+
+.chart-footer-title {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.chart-instructions {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
